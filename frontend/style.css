@@ -1,0 +1,110 @@
+
+body {
+    background-color: #141414;
+    color: #ffffff;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 20px 50px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7) 10%, rgba(0,0,0,0));
+}
+
+header h1 {
+    color: #E50914;
+    font-size: 2.5rem;
+    margin: 0;
+    text-align: center;
+}
+
+
+.konyv-listazas {
+    display: flex;
+    flex-wrap: wrap;        
+    justify-content: center;
+    gap: 30px;             
+    padding: 40px 50px;
+    max-width: 1400px;
+    margin: 0 auto;         
+}
+
+
+.konyv-kartya {
+    flex: 0 0 calc(25% - 30px); 
+    min-width: 250px;        
+    background: #181818;
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 520px;
+    transition: transform 0.3s ease;
+    box-sizing: border-box;
+}
+
+.konyv-kartya:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+.borito {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.konyv-infok h3 {
+    font-size: 1.2rem;
+    margin: 5px 0;
+    color: #fff;
+}
+
+.leiras {
+    font-size: 0.9rem;
+    color: #b3b3b3;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.gombok {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.olvasas { background: white; color: black; }
+.olvasas:hover { background: #e6e6e6; }
+
+.letoltes { background: #4a4a4a; color: white; }
+.letoltes:hover { background: #5a5a5a; }
+
+@media (max-width: 1200px) {
+    .konyv-kartya { flex: 0 0 calc(33.33% - 30px); }
+}
+
+@media (max-width: 900px) {
+    .konyv-kartya { flex: 0 0 calc(50% - 30px); }    
+}
+
+@media (max-width: 600px) {
+    .konyv-kartya { flex: 0 0 100%; }                
+}
